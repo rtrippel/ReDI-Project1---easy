@@ -1,6 +1,7 @@
 # Project 1 - Landing Page for Base Apparel
 
-In diesem Project habe och doe Challenge "Base Apparel"
+### [This site is live here](https://rtrippel.github.io/ReDI-Project1---easy/)
+
 
 ![](Starterkit/design/mobile-design.jpg)
 
@@ -13,4 +14,4 @@ In diesem Project habe och doe Challenge "Base Apparel"
 Roman Trippel
 
 **e-mail:**  
-rtrippel84@gmail.com
+mail@romantrippel.com

@@ -1,75 +1,124 @@
+/* Reset styles for all elements */
 * {
     margin: 0;
     padding: 0;
 }
+
+/* Color scheme variables */
 :root {
-    --bgColor: hsl(0, 100%, 98%);
-    --textColor: hsl(0, 36%, 70%);
-    --shadowColor: hsl(0, 36%, 68%)
+    --bg: hsl(0, 100%, 98%);
+    --text: hsl(0, 36%, 70%);
+    --shadow: hsl(0, 36%, 68%);
 }
+
+/* Body styles */
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+/* Font import */
 @font-face {
     font-family: 'Josefin Sans';
-    src: url('fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('TTF');
+    src: url('fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    }
-body {
-    width: 375px;
-    background-color: var(--bgColor);
 }
-.logo-img {
-    margin: 1rem;
-}
-.logo-img svg {
-    margin-left: -0.7rem;
-    scale: 0.65;
-}
-.hero-img img {
-    width: 100%;
-}
+
+/* Common styles for text elements */
 h1, p {
-    color: var(--textColor);
+    color: var(--text);
     text-align: center;
     font-weight: 300;
-    margin: 3rem 3rem 1rem 3rem;
+    margin: 3rem;
 }
-section h1 {
+
+/* Heading styles */
+h1 {
     font-size: 3rem;
     letter-spacing: 0.5rem;
     line-height: 2.7rem;
 }
-section p {
+
+/* Paragraph styles */
+p {
     font-size: 0.9rem;
-    margin: 0 2.5rem;
 }
-.email-button {
+
+/* Logo container styles */
+.logo-container img {
+    margin: 2rem;
+    width: 30vw;
+}
+
+/* Hero container styles */
+.hero-container img{
+    width: 100vw;
+}
+
+/* Form styles */
+.send-email-button {
     margin: 2rem;
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: center;
 }
+
+/* Input styles */
 input {
-    border: 1px solid var(--textColor);
+    border: 1px solid var(--text);
     border-radius: 20px;
     width: 100%;
     padding: 0.8rem 1rem;
 }
+
+input:focus {
+    outline: none;
+}
+
+/* Button styles */
 button {
     border: none;
-    border-radius: 20px;
+    border-radius: 19px;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     width: 18%;
-    height: 100%;
-    right: 0;
+    height: 97%;
+    right: 1px;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: var(--shadowColor) 0 10px 10px;
 }
-.email-button svg {
-    scale: 0.7;
+
+button:hover {
+    box-shadow: var(--shadow) 0 10px 10px;
 }
+
+/* Placeholder styles for input */
 ::placeholder {
-    color: var(--textColor);
+    color: var(--text);
+}
+
+/* Media query for devices with screen width greater than or equal to 1440px */
+@media (min-width: 1440px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .logo-container {
+        flex: 1;
+        width: 40vw;
+    }
+
+    .hero-container {
+        flex: 1;
+        width: 60vw;
+    }
 }
